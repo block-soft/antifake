@@ -1,0 +1,88 @@
+{
+  "contract_name": "Product",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "register",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "registered",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "DATABASE_CONTRACT",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "title",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "check",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_title",
+          "type": "bytes32"
+        },
+        {
+          "name": "_DATABASE_CONTRACT",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000c57fe5b60405160408061022f8339810160405280516020909101515b60018281556002805460ff1916909117905560008054600160a060020a031916600160a060020a0383811691909117808355604080517ff44a6ca9000000000000000000000000000000000000000000000000000000008152308416600482015290519190921692839263f44a6ca9926024808301939282900301818387803b15156100ad57fe5b6102c65a03f115156100bb57fe5b5050505b5050505b61015d806100d26000396000f300606060405263ffffffff60e060020a6000350416631aa3a008811461004d5780632de40ce314610071578063301374c6146100955780634a79d50c146100c1578063919840ad1461004d575bfe5b341561005557fe5b61005d610107565b604080519115158252519081900360200190f35b341561007957fe5b61005d61010d565b604080519115158252519081900360200190f35b341561009d57fe5b6100a5610116565b60408051600160a060020a039092168252519081900360200190f35b34156100c957fe5b6100d1610125565b60408051918252519081900360200190f35b341561005557fe5b61005d610107565b604080519115158252519081900360200190f35b60005b90565b60025460ff1681565b600054600160a060020a031681565b60015481565b60005b905600a165627a7a72305820fbf9c9cd60e16ee241b26cfd3dd30b40667a536d82b1afdf861b232ac0dbed560029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1497556307535
+}

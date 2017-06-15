@@ -1,0 +1,111 @@
+{
+  "contract_name": "Database",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "productAddress",
+          "type": "address"
+        }
+      ],
+      "name": "registerProduct",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "productAddress",
+          "type": "address"
+        }
+      ],
+      "name": "checkProduct",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "products",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "productAddress",
+          "type": "address"
+        }
+      ],
+      "name": "addProduct",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "payable": false,
+      "type": "fallback"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000c57fe5b5b5b60008054600160a060020a03191633600160a060020a03161790555b5b5b6103758061003b6000396000f3006060604052361561005c5763ffffffff60e060020a6000350416632d46f5df81146100725780633ea6c82d146100a25780637acc0b20146100d25780638da5cb5b14610101578063f2fde38b1461012d578063f44a6ca91461014b575b341561006457fe5b6100705b60006000fd5b565b005b341561007a57fe5b61008e600160a060020a0360043516610169565b604080519115158252519081900360200190f35b34156100aa57fe5b61008e600160a060020a03600435166101d4565b604080519115158252519081900360200190f35b34156100da57fe5b6100e560043561023f565b60408051600160a060020a039092168252519081900360200190f35b341561010957fe5b6100e5610271565b60408051600160a060020a039092168252519081900360200190f35b341561013557fe5b610070600160a060020a0360043516610280565b005b341561015357fe5b610070600160a060020a03600435166102bc565b005b6000600082905080600160a060020a0316631aa3a0086000604051602001526040518163ffffffff1660e060020a028152600401809050602060405180830381600087803b15156101b657fe5b6102c65a03f115156101c457fe5b5050604051519250505b50919050565b6000600082905080600160a060020a031663919840ad6000604051602001526040518163ffffffff1660e060020a028152600401809050602060405180830381600087803b15156101b657fe5b6102c65a03f115156101c457fe5b5050604051519250505b50919050565b600180548290811061024d57fe5b906000526020600020900160005b915054906101000a9004600160a060020a031681565b600054600160a060020a031681565b60005433600160a060020a0390811691161461029c5760006000fd5b60008054600160a060020a031916600160a060020a0383161790555b5b50565b600180548082016102cd83826102fe565b916000526020600020900160005b8154600160a060020a038086166101009390930a92830292021916179055505b50565b81548183558181151161032257600083815260209020610322918101908301610328565b5b505050565b61034691905b80821115610342576000815560010161032e565b5090565b905600a165627a7a723058203c653a30845e811115b434a929599b51fcf100850feeef274582c0d0dd8862970029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1497556307534
+}

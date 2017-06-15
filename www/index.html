@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+		  integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+			integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+			crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+			integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+			crossorigin="anonymous"></script>
+	<title>Antifake</title>
+</head>
+<body>
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+			data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+			aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<a class="navbar-brand" href="#">Antifake Token Based</a>
+
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">1. For Manufacturer <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">2. For Customer Check</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">3. For Customer Registration</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<div class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 class="display-3">Antifake</h1>
+				<p>Need to write small intro here</p>
+				<p><a class="btn btn-primary btn-lg" href="https://github.com/block-soft/antifake" role="button">Learn more
+					&raquo;</a></p>
+			</div>
+			<div class="col-md-6" id="info_alerts">
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container" id="loading_boxes">
+	<div class="row">
+		<h1>Contracts are loading....</h1>
+	</div>
+</div>
+<div class="container" id="loaded_boxes" style="display: none">
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Step 0. Contracts</h2>
+		</div>
+		<div class="col-md-6">
+
+			Admin account is
+			<br/>
+			<span id="admin_account" style="color:green"></span>
+
+		</div>
+		<div class="col-md-6">
+
+			Customer account is
+			<br/>
+			<span id="customer_account" style="color:green"></span>
+
+		</div>
+		<div class="col-md-6">
+
+			Contract for Database is
+			<br/>
+			<span id="database_contract" style="color:green"></span>
+
+		</div>
+		<div class="col-md-6">
+
+			Contract for Product Factory is
+			<br/>
+			<span id="product_factory_contract" style="color:green"></span>
+
+		</div>
+	</div>
+
+	<div class="row" style="padding-top: 20px">
+		<div class="col-md-12">
+			<h2>Step 1. Products List</h2>
+		</div>
+		<div class="col-md-6">
+			<div id="product_hashes">
+
+			</div>
+		</div>
+		<div class="col-md-6">
+			<p>
+			<form class="form-inline">
+				<input class="form-control mr-sm-2" type="text" placeholder="Product Name" id="product_new">
+				<button class="btn btn-outline-success my-2 my-sm-0"
+						onClick="Products.createProduct($('#product_new').val(), false); return false;">
+					Create
+				</button>
+			</form>
+			</p>
+		</div>
+	</div>
+
+	<div class="row" style="padding-top: 20px">
+		<div class="col-md-12">
+			<h2>Step 2. Product Check</h2>
+		</div>
+		<div class="col-md-6">
+			<div id="product_check_result">
+
+			</div>
+		</div>
+		<div class="col-md-6">
+			<p>
+			<form class="form-inline">
+				<input class="form-control mr-sm-2" type="text" placeholder="Product Hash" id="product_check">
+				<button class="btn btn-outline-success my-2 my-sm-0"
+						onClick="Products.checkProduct($('#product_check').val(), '#product_check_result'); return false;">
+					Check
+				</button>
+			</form>
+			</p>
+		</div>
+	</div>
+
+	<div class="row" style="padding-top: 20px">
+		<div class="col-md-12">
+			<h2>Step 3. Product Registration</h2>
+		</div>
+		<div class="col-md-6">
+			<div id="product_register_result">
+
+			</div>
+		</div>
+		<div class="col-md-6">
+			<p>
+			<form class="form-inline">
+			<input class="form-control mr-sm-2" type="text" placeholder="Product Hash" id="product_check2"/>
+			<input class="form-control mr-sm-2" type="text" placeholder="Product Secret" id="product_secret2"/>
+				<button class="btn btn-outline-success my-2 my-sm-0"
+						onClick="Products.registerProduct($('#product_check2').val(), $('#product_secret2').val()); return false;">
+					Register
+				</button>
+			</form>
+			</p>
+		</div>
+	</div>
+
+	<div class="row" style="padding-top: 20px">
+		<div class="col-md-12">
+			<h2>Step 4. Product Check after Registration</h2>
+		</div>
+		<div class="col-md-6">
+			<div id="product_check_result3">
+
+			</div>
+		</div>
+		<div class="col-md-6">
+			<p>
+			<form class="form-inline">
+				<input class="form-control mr-sm-2" type="text" placeholder="Product Hash" id="product_check3">
+				<button class="btn btn-outline-success my-2 my-sm-0"
+						onClick="Products.checkProduct($('#product_check3').val(), '#product_check_result3'); return false;">
+					Check
+				</button>
+			</form>
+			</p>
+		</div>
+	</div>
+
+</div>
+
+<hr>
+
+<footer>
+	<p>&copy; <a href="http://blocksoft.biz">blocksoft.biz</a> 2017</p>
+</footer>
+</div> <!-- /container -->
+
+
+<script src="libs/web3.js"></script>
+<script src="app/init.js"></script>
+</body>
+</html>
